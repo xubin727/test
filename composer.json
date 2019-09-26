@@ -8,5 +8,6 @@
 	],
 	"description" : "基于微信官方SDK的微信支付API封装",
 	"version" : "3.0.10",
-	"license" : "MIT"
+	"license" : "MIT",
+	"minimum-stability" : "dev"
 }
