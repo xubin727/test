@@ -4,7 +4,7 @@
 	"type" : "library",
 	"version" : "3.0.10",
 	"license" : "MIT",
-	"minimum-stability" : "beta",
+	"minimum-stability" : "dev",
 	"authors" : [{
 			"name" : "xubin",
 			"email" : "xubin727@163.com",
