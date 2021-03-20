@@ -1,5 +1,10 @@
 <?php
 namespace xubin\wxpayapi;
+
+use xubin\wxpayapi\WxPay\WxPayBizPayUrl;
+use xubin\wxpayapi\WxPay\WxPayConfig;
+use xubin\wxpayapi\WxPay\WxpayApi;
+
 /**
 *
 * example目录下为简单的支付样例，仅能用于搭建快速体验微信支付使用

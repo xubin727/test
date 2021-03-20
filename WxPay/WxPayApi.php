@@ -2,19 +2,19 @@
 namespace xubin\wxpayapi\WxPay;
 
 
-use xubin\wxpayapi\WxPayData\WxPayBizPayUrl;
-use xubin\wxpayapi\WxPayData\WxPayCloseOrder;
-use xubin\wxpayapi\WxPayData\WxPayDownloadBill;
-use xubin\wxpayapi\WxPayData\WxPayMicroPay;
-use xubin\wxpayapi\WxPayData\WxPayNotifyResults;
-use xubin\wxpayapi\WxPayData\WxPayOrderQuery;
-use xubin\wxpayapi\WxPayData\WxPayRefund;
-use xubin\wxpayapi\WxPayData\WxPayRefundQuery;
-use xubin\wxpayapi\WxPayData\WxPayReport;
-use xubin\wxpayapi\WxPayData\WxPayResults;
-use xubin\wxpayapi\WxPayData\WxPayReverse;
-use xubin\wxpayapi\WxPayData\WxPayShortUrl;
-use xubin\wxpayapi\WxPayData\WxPayUnifiedOrder;
+use xubin\wxpayapi\WxPay\WxPayBizPayUrl;
+use xubin\wxpayapi\WxPay\WxPayCloseOrder;
+use xubin\wxpayapi\WxPay\WxPayDownloadBill;
+use xubin\wxpayapi\WxPay\WxPayMicroPay;
+use xubin\wxpayapi\WxPay\WxPayNotifyResults;
+use xubin\wxpayapi\WxPay\WxPayOrderQuery;
+use xubin\wxpayapi\WxPay\WxPayRefund;
+use xubin\wxpayapi\WxPay\WxPayRefundQuery;
+use xubin\wxpayapi\WxPay\WxPayReport;
+use xubin\wxpayapi\WxPay\WxPayResults;
+use xubin\wxpayapi\WxPay\WxPayReverse;
+use xubin\wxpayapi\WxPay\WxPayShortUrl;
+use xubin\wxpayapi\WxPay\WxPayUnifiedOrder;
 // require_once "WxPay.Exception.php";
 // require_once "WxPay.Config.Interface.php";
 // require_once "WxPay.Data.php";
