@@ -3,6 +3,7 @@ namespace xubin\wxpayapi\WxPay;
 
 use xubin\wxpayapi\WxPay\WxPayConfigInterface;
 use xubin\wxpayapi\WxPay\WxPayException;
+use xubin\wxpayapi\WxPay\Data\WxPayDataBaseSignMd5;
 
 /**
  * 2015-06-29 修复签名问题

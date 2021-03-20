@@ -2,7 +2,7 @@
 	"name" : "xubin/wxpayapi",
 	"description" : "基于微信官方SDK的微信支付API封装",
 	"type" : "library",
-	"version" : "1.0.19",
+	"version" : "1.0.20",
 	"license" : "MIT",
 	"minimum-stability" : "dev",
 	"authors" : [{
