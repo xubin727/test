@@ -1,5 +1,5 @@
 <?php
-namespace xubin\wxpayapi\WxPayData;
+// namespace xubin\wxpayapi\WxPayData;
 
 
 /**

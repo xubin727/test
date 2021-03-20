@@ -1,5 +1,5 @@
 <?php
-namespace xubin\wxpayapi;
+namespace xubin\wxpayapi\WxPay;
 
 
 use xubin\wxpayapi\WxPayData\WxPayBizPayUrl;

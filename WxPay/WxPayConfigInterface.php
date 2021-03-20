@@ -1,22 +1,11 @@
 <?php
-namespace xubin\wxpayapi;
-/**
-*
-* example目录下为简单的支付样例，仅能用于搭建快速体验微信支付使用
-* 样例的作用仅限于指导如何使用sdk，在安全上面仅做了简单处理， 复制使用样例代码时请慎重
-* 请勿直接直接使用样例对外提供服务
-*
-**/
-// require_once "../lib/WxPay.Config.Interface.php";
+namespace xubin\wxpayapi\WxPay;
 
 /**
-*
-* 该类需要业务自己继承， 该类只是作为deamon使用
-* 实际部署时，请务必保管自己的商户密钥，证书等
-*
+* 	配置账号信息
 */
 
-class WxPayConfig extends WxPayConfigInterface
+abstract class WxPayConfigInterface
 {
 	//=======【基本信息设置】=====================================
 	/**
@@ -28,41 +17,27 @@ class WxPayConfig extends WxPayConfigInterface
 	 * MCHID：商户号（必须配置，开户邮件中可查看）
 	 *
 	 */
-	public function GetAppId()
-	{
-		return '';
-	}
-	public function GetMerchantId()
-	{
-		return '';
-	}
+	public abstract function GetAppId();
+	public abstract function GetMerchantId();
+	
 	
 	//=======【支付相关配置：支付成功回调地址/签名方式】===================================
 	/**
 	* TODO:支付回调url
 	* 签名和验证签名方式， 支持md5和sha256方式
 	**/
-	public function GetNotifyUrl()
-	{
-		return "";
-	}
-	public function GetSignType()
-	{
-		return "HMAC-SHA256";
-	}
+	public abstract function GetNotifyUrl();
+	public abstract function GetSignType();
 
 	//=======【curl代理设置】===================================
 	/**
 	 * TODO：这里设置代理机器，只有需要代理的时候才设置，不需要代理，请设置为0.0.0.0和0
 	 * 本例程通过curl使用HTTP POST方法，此处可修改代理服务器，
 	 * 默认CURL_PROXY_HOST=0.0.0.0和CURL_PROXY_PORT=0，此时不开启代理（如有需要才设置）
-	 * @var unknown_type
+	 *
+// 	 * @var unknown_type
 	 */
-	public function GetProxy(&$proxyHost, &$proxyPort)
-	{
-		$proxyHost = "0.0.0.0";
-		$proxyPort = 0;
-	}
+	public abstract function GetProxy(&$proxyHost, &$proxyPort);
 	
 
 	//=======【上报信息配置】===================================
@@ -73,10 +48,7 @@ class WxPayConfig extends WxPayConfigInterface
 	 * 上报等级，0.关闭上报; 1.仅错误出错上报; 2.全量上报
 	 * @var int
 	 */
-	public function GetReportLevenl()
-	{
-		return 1;
-	}
+	public abstract function GetReportLevenl();
 
 
 	//=======【商户密钥信息-需要业务方继承】===================================
@@ -88,14 +60,8 @@ class WxPayConfig extends WxPayConfigInterface
 	 * 获取地址：https://mp.weixin.qq.com/advanced/advanced?action=dev&t=advanced/dev&token=2005451881&lang=zh_CN
 	 * @var string
 	 */
-	public function GetKey()
-	{
-		return '';
-	}
-	public function GetAppSecret()
-	{
-		return '';
-	}
+	public abstract function GetKey();
+	public abstract function GetAppSecret();
 
 
 	//=======【证书路径设置-需要业务方继承】=====================================
@@ -107,11 +73,8 @@ class WxPayConfig extends WxPayConfigInterface
 	 * 1.证书文件不能放在web服务器虚拟目录，应放在有访问权限控制的目录中，防止被他人下载；
 	 * 2.建议将证书文件名改为复杂且不容易猜测的文件名；
 	 * 3.商户服务器要做好病毒和木马防护工作，不被非法侵入者窃取证书文件。
-	 * @var path
+// 	 * @var path
 	 */
-	public function GetSSLCertPath(&$sslCertPath, &$sslKeyPath)
-	{
-		$sslCertPath = '../cert/apiclient_cert.pem';
-		$sslKeyPath = '../cert/apiclient_key.pem';
-	}
+	public abstract function GetSSLCertPath(&$sslCertPath, &$sslKeyPath);
 }
+
