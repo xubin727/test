@@ -1,8 +1,8 @@
 <?php
 namespace xubin\wxpayapi\WxPay;
 
-use xubin\wxpayapi\WxPayData\WxPayNotifyReply;
-use xubin\wxpayapi\WxPayData\WxPayNotifyResults;
+use xubin\wxpayapi\WxPay\WxPayNotifyReply;
+use xubin\wxpayapi\WxPay\WxPayNotifyResults;
 
 /**
  *

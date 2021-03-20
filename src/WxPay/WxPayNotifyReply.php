@@ -1,6 +1,8 @@
 <?php
 namespace xubin\wxpayapi\WxPay;
 
+use xubin\wxpayapi\WxPay\WxPayConfigInterface;
+use xubin\wxpayapi\WxPay\WxPayException;
 
 /**
  * 2015-06-29 修复签名问题

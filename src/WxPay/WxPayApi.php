@@ -15,6 +15,8 @@ use xubin\wxpayapi\WxPay\WxPayResults;
 use xubin\wxpayapi\WxPay\WxPayReverse;
 use xubin\wxpayapi\WxPay\WxPayShortUrl;
 use xubin\wxpayapi\WxPay\WxPayUnifiedOrder;
+use xubin\wxpayapi\WxPay\WxPayConfigInterface;
+use xubin\wxpayapi\WxPay\WxPayException;
 // require_once "WxPay.Exception.php";
 // require_once "WxPay.Config.Interface.php";
 // require_once "WxPay.Data.php";

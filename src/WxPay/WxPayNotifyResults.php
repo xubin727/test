@@ -1,8 +1,8 @@
 <?php
 namespace xubin\wxpayapi\WxPay;
 
-use xubin\wxpayapi\WxPayConfigInterface;
-use xubin\wxpayapi\WxPayException;
+use xubin\wxpayapi\WxPay\WxPayConfigInterface;
+use xubin\wxpayapi\WxPay\WxPayException;
 
 
 

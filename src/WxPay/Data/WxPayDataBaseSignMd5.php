@@ -2,6 +2,7 @@
 namespace xubin\wxpayapi\WxPay\Data;
 
 use xubin\wxpayapi\WxPay\WxPayConfigInterface;
+use xubin\wxpayapi\WxPay\WxPayException;
 
 
 /**

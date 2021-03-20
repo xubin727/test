@@ -1,7 +1,9 @@
 <?php
 namespace xubin\wxpayapi\WxPay\Data;
 
+use xubin\wxpayapi\WxPay\WxPayConfigInterface;
 use xubin\wxpayapi\WxPay\WxPayException;
+
 // require_once "WxPay.Config.Interface.php";
 // require_once "WxPay.Exception.php";
 
