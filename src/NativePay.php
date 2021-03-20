@@ -2,7 +2,7 @@
 namespace xubin\wxpayapi;
 
 use xubin\wxpayapi\WxPay\WxPayBizPayUrl;
-use xubin\wxpayapi\WxPay\WxPayConfig;
+use xubin\wxpayapi\WxPayConfig;
 use xubin\wxpayapi\WxPay\WxpayApi;
 use xubin\wxpayapi\Loger\CLogFileHandler;
 
