@@ -1,5 +1,8 @@
 <?php
-namespace xubin\wxpayapi\WxPay;
+namespace xubin\wxpayapi;
+
+use xubin\wxpayapi\WxPay\WxPayConfigInterface;
+
 /**
 *
 * example目录下为简单的支付样例，仅能用于搭建快速体验微信支付使用
@@ -18,6 +21,38 @@ namespace xubin\wxpayapi\WxPay;
 
 class WxPayConfig extends WxPayConfigInterface
 {
+    
+    protected $appid = '';
+    protected $merchantid = '';
+    protected $notifyurl = '';
+    protected $signtype = "HMAC-SHA256";
+    protected $proxyhost = '0.0.0.0';
+    protected $proxyport = 0;
+    protected $reportlevel = 1;
+    protected $key = '';
+    protected $appsecret = '';
+    protected $sslcertpath = '../cert/apiclient_cert.pem';
+    protected $sslkeypath = '../cert/apiclient_key.pem';
+    
+    /**
+     * 设置配置项
+     * @param $config array
+     */
+    public function setConfigs($config=[])
+    {
+        isset($config['appid']) && $this->appid = '';
+        isset($config['merchantid']) && $this->merchantid = '';
+        isset($config['notifyurl']) && $this->notifyurl = '';
+        isset($config['signtype']) && $this->signtype = "HMAC-SHA256";
+        isset($config['proxyhost']) && $this->proxyhost = '0.0.0.0';
+        isset($config['proxyport']) && $this->proxyport = 0;
+        isset($config['reportlevel']) && $this->reportlevel = 1;
+        isset($config['key']) && $this->key = '';
+        isset($config['appsecret']) && $this->appsecret = '';
+        isset($config['sslcertpath']) && $this->sslcertpath = '../cert/apiclient_cert.pem';
+        isset($config['sslkeypath']) && $this->sslkeypath = '../cert/apiclient_key.pem';
+    }
+    
 	//=======【基本信息设置】=====================================
 	/**
 	 * TODO: 修改这里配置为您自己申请的商户信息
@@ -30,11 +65,11 @@ class WxPayConfig extends WxPayConfigInterface
 	 */
 	public function GetAppId()
 	{
-		return '';
+		return $this->appid;
 	}
 	public function GetMerchantId()
 	{
-		return '';
+		return $this->merchantid;
 	}
 	
 	//=======【支付相关配置：支付成功回调地址/签名方式】===================================
@@ -44,11 +79,11 @@ class WxPayConfig extends WxPayConfigInterface
 	**/
 	public function GetNotifyUrl()
 	{
-		return "";
+		return $this->notifyurl;
 	}
 	public function GetSignType()
 	{
-		return "HMAC-SHA256";
+		return $this->signtype;
 	}
 
 	//=======【curl代理设置】===================================
@@ -60,8 +95,8 @@ class WxPayConfig extends WxPayConfigInterface
 	 */
 	public function GetProxy(&$proxyHost, &$proxyPort)
 	{
-		$proxyHost = "0.0.0.0";
-		$proxyPort = 0;
+		$proxyHost = $this->proxyhost;
+		$proxyPort = $this->proxyport;
 	}
 	
 
@@ -75,7 +110,7 @@ class WxPayConfig extends WxPayConfigInterface
 	 */
 	public function GetReportLevenl()
 	{
-		return 1;
+		return $this->reportlevel;
 	}
 
 
@@ -90,11 +125,11 @@ class WxPayConfig extends WxPayConfigInterface
 	 */
 	public function GetKey()
 	{
-		return '';
+		return $this->key;
 	}
 	public function GetAppSecret()
 	{
-		return '';
+		return $this->appsecret;
 	}
 
 
@@ -111,7 +146,7 @@ class WxPayConfig extends WxPayConfigInterface
 	 */
 	public function GetSSLCertPath(&$sslCertPath, &$sslKeyPath)
 	{
-		$sslCertPath = '../cert/apiclient_cert.pem';
-		$sslKeyPath = '../cert/apiclient_key.pem';
+		$sslCertPath = $this->sslcertpath;
+		$sslKeyPath = $this->sslkeypath;
 	}
 }

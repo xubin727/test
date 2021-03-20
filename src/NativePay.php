@@ -4,6 +4,7 @@ namespace xubin\wxpayapi;
 use xubin\wxpayapi\WxPay\WxPayBizPayUrl;
 use xubin\wxpayapi\WxPay\WxPayConfig;
 use xubin\wxpayapi\WxPay\WxpayApi;
+use xubin\wxpayapi\Loger\CLogFileHandler;
 
 /**
 *
@@ -27,14 +28,15 @@ class NativePay
 	/**
 	 *
 	 * 生成扫描支付URL,模式一
-	 * @param BizPayUrlInput $bizUrlInfo
+	 * @param string|numberic  $productId 商品id
+	 * @param array $conf 支付配置信息
 	 */
-	public function GetPrePayUrl($productId)
+	public function GetPrePayUrl($productId, $conf)
 	{
 		$biz = new WxPayBizPayUrl();
 		$biz->SetProduct_id($productId);
 		try{
-			$config = new WxPayConfig();
+			$config = new WxPayConfig($conf);
 			$values = WxpayApi::bizpayurl($config, $biz);
 		} catch(Exception $e) {
 			Log::ERROR(json_encode($e));
