@@ -1,6 +1,7 @@
 <?php
 namespace xubin\wxpayapi\WxPay;
 
+use xubin\wxpayapi\WxPay\Data\WxPayDataBase;
 
 /**
  * 2015-06-29 修复签名问题
