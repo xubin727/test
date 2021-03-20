@@ -3088,6 +3088,16 @@ namespace xubin\wxpayapi\PhpQrCode;
         }
         
         //----------------------------------------------------------------------
+        /**
+         * 生成png格式二维码
+         * @param string $text 二维码内容
+         * @param boolean $outfile 输出到指定本地文件。默认为空，不输出到文件
+         * @param string $level 生成的图片的质量。有QR_ECLEVEL_L、QR_ECLEVEL_M、QR_ECLEVEL_Q、QR_ECLEVEL_H。默认为最低质量QR_ECLEVEL_L
+         * @param number $size 生成的图片的大小
+         * @param number $margin 生成的图片的外边距
+         * @param boolean $saveandprint 是否保存。如选true，则$outfile项必须传值
+         * @return data 图片内容
+         */
         public static function png($text, $outfile = false, $level = QR_ECLEVEL_L, $size = 3, $margin = 4, $saveandprint=false)
         {
             $enc = QRencode::factory($level, $size, $margin);
@@ -3095,6 +3105,9 @@ namespace xubin\wxpayapi\PhpQrCode;
         }
 
         //----------------------------------------------------------------------
+        /**
+         * 参数参考PNG
+         */
         public static function text($text, $outfile = false, $level = QR_ECLEVEL_L, $size = 3, $margin = 4)
         {
             $enc = QRencode::factory($level, $size, $margin);
@@ -3102,6 +3115,9 @@ namespace xubin\wxpayapi\PhpQrCode;
         }
 
         //----------------------------------------------------------------------
+        /**
+         * 参数参考PNG
+         */
         public static function raw($text, $outfile = false, $level = QR_ECLEVEL_L, $size = 3, $margin = 4)
         {
             $enc = QRencode::factory($level, $size, $margin);
