@@ -66,13 +66,14 @@ class NativePay
 	 *
 	 * 生成直接支付url，支付url有效期为2小时,模式二
 	 * @param UnifiedOrderInput $input
+	 * @param WxPayConfig $conf
 	 */
-	public function GetPayUrl($input)
+	public function GetPayUrl($input, $conf)
 	{
 		if($input->GetTrade_type() == "NATIVE")
 		{
 			try{
-				$config = new WxPayConfig();
+				$config = new WxPayConfig($conf);
 				$result = WxPayApi::unifiedOrder($config, $input);
 				return $result;
 			} catch(Exception $e) {
